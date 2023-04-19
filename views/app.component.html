@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My App | Home</title>
+
+    <script src="../build/main.js" defer></script>
+</head>
+
+<body>
+    <!-- APP ROOT  -->
+    <main id="root">
+        <div id="app">
+            <time-formatted datetime="2019-12-01" year="numeric" month="long" day="numeric" hour="numeric" minute="numeric"
+            second="numeric" time-zone-name="short"></time-formatted>
+        </div>
+    </main>
+
+
+
+    <script>
+        // DEBUG TO CONSOLE
+        const log = console.log;
+
+        // SELECTORS
+        const root = document;
+        const body = document.querySelector('body');
+
+        body.style.height = "100vh";
+        body.style.margin = "0";
+        body.style.padding = "0";
+
+        root.addEventListener('scroll', () => { log('Scrolled') })
+
+        const appRoot = document.querySelector('#app');
+        appRoot.style.backgroundColor = '#242424';
+        appRoot.style.color = '#eee';
+        appRoot.style.fontFamily = 'monospace';
+        appRoot.style.letterSpacing = '2px';
+        appRoot.style.maxWidth = '40%';
+        appRoot.style.margin = 'auto';
+        appRoot.style.top = '25vh';
+        appRoot.style.position = 'relative';
+        appRoot.style.borderRadius = '12px';
+        appRoot.style.padding = '2rem';
+        appRoot.style.boxShadow = '0 1rem 1rem 0 rgba(0, 0, 0, 0.2)';
+
+        const renderDefault = document.createElement('div');
+        renderDefault.setAttribute('id', 'default-content');
+        appRoot.appendChild(renderDefault);
+
+        // DEFAULT CONTENT
+        let defaultContent = `
+            <h1 class='content-title'>
+                My App
+            </h1>
+
+            <hr>
+
+            <h2>
+                Default Page Content....
+            </h2>
+        `;
+
+        // RENDER DEFAULT CONTENT
+        renderDefault.innerHTML = defaultContent;
+
+
+    </script>
+</body>
+
+</html>

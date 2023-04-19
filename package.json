@@ -1,0 +1,19 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "App with custom components",
+  "main": "main.ts",
+  "scripts": {
+    "build": "rimraf ./build && tsc",
+    "start:dev": "nodemon",
+    "start": "npmm run build"
+  },
+  "author": "Irfan Ghat",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.15.11"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.1"
+  }
+}
